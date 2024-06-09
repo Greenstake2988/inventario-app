@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Añadir Ite</title>
+</head>
+
+<body>
+    <h1>Añadir Nuevo Item</h1>
+    <form method="post">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" required><br>
+        <label for="quantity">Cantidad:</label>
+        <input type="number" id="quantity" name="quantity" required><br>
+        <label for="description">Descripcíon:</label>
+        <input type="text" id="description" name="description"><br>
+        <input type="submit" value="Añdir">
+    </form>
+    <a href="{{ url_for('index') }}">Volver al Inventario</a>
+</body>
+
+</html>

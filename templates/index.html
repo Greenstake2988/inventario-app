@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Inventario</title>
+</head>
+
+<body>
+    <h1>Inventario</h1>
+    <a href="{{ url_for('add_item') }}"> Añadir Nuevo Item</a>
+    <ul>
+        {% for item in items %}
+        <li>{{ item[1] }} - {{ item[2] }} unidades - {{ item[3] }} </li>
+        <form action="{{ url_for('delete_item', item_id=item[0]) }}" method="post" style="display:inline;">
+            <button type="submit">Borrar</button>
+        </form>
+        {% endfor %}
+    </ul>
+</body>
+
+</html>
